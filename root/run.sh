@@ -1,8 +1,7 @@
 #!/bin/bash
-env
-
 echo "----"
 id
+echo "----"
 
 ls -al /var/lib/nginx/
 ls -al /var/log/nginx/
