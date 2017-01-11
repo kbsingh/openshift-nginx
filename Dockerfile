@@ -13,6 +13,8 @@ RUN chmod 777 /run.sh
 RUN chmod -R 777 /usr/share/nginx/html/
 RUN echo "nginx on CentOS7" > /usr/share/nginx/html/index.html
 RUN chmod 777 /run /var/log/nginx 
+RUN mkdir -p /usr/share/nginx/html/.well-known/acme-challenge/ &&
+    echo ${LEVAL} > /usr/share/nginx/html/.well-known/acme-challenge/${LEFileName}
 
 EXPOSE 8080
 USER 997
